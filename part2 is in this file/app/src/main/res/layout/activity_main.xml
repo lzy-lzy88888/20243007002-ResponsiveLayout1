@@ -43,4 +43,61 @@
             android:layout_gravity="center"/>
     </FrameLayout>
 
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/layer3"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/layer2"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHeight_percent="0.1667">
+
+        <TextView
+            android:id="@+id/tvThis"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#ff0000"
+            android:text="This"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toStartOf="@id/tvIs"/>
+
+        <TextView
+            android:id="@+id/tvIs"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#0000ff"
+            android:text="is"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/tvThis"
+            app:layout_constraintEnd_toStartOf="@id/tvMy"/>
+
+        <TextView
+            android:id="@+id/tvMy"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#663399"
+            android:text="my"
+            android:textColor="#ffffff"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/tvIs"
+            app:layout_constraintEnd_toStartOf="@id/tvFirst"/>
+
+        <TextView
+            android:id="@+id/tvFirst"
+            android:layout_width="0dp"
+            android:layout_height="match_parent"
+            android:background="#ffff00"
+            android:text="first"
+            android:textColor="#000000"
+            android:gravity="center"
+            app:layout_constraintStart_toEndOf="@id/tvMy"
+            app:layout_constraintEnd_toEndOf="parent"/>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
 </androidx.constraintlayout.widget.ConstraintLayout>
